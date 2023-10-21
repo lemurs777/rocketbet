@@ -1,0 +1,52 @@
+@import "sass-rem";
+
+.studiosItem {
+  background-color: #19262b;
+  border-radius: rem(var(--sizeBg));
+  overflow: hidden;
+  display: block;
+  transition: transform .3s ease-out;
+  min-width: rem(162px);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__img {
+    display: flex;
+    padding: rem(0 30px);
+    align-items: center;
+    justify-content: center;
+    height: rem(168px);
+    @media (max-width: 991.98px) {
+      height: rem(87px);
+    }
+  }
+
+  &__bottom {
+    padding: rem(16.5px 12px);
+    text-transform: capitalize;
+    background-color: var(--secondaryColor);
+    @media (max-width: 991.98px) {
+      padding: rem(8px 12px);
+    }
+
+  }
+
+  &__title {
+    font-size: rem(16px);
+    display: inline-block;
+    @media(max-width: 991.98px) {
+      font-size: rem(12px);
+    }
+  }
+
+  &__amount {
+    color: #404f55;
+    font-size: rem(12px);
+    display: inline-block;
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
+}

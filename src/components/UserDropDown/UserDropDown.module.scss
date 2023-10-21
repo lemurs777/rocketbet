@@ -1,0 +1,91 @@
+@import "sass-rem";
+
+.user {
+  &__list {
+    position: absolute;
+    top: calc(100% - rem(8px));
+    background-color: #202F35;
+    border-radius: rem(4px);
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+    min-width: rem(150px);
+
+    &.show {
+      max-height: 100vh;
+    }
+  }
+}
+.mobileUser{
+  display: inline-block;
+}
+.userLabel {
+
+  min-width: rem(150px);
+  position: relative;
+  border-radius: rem(8px);
+  background: #202F35;
+  padding: rem(8px);
+  display: flex;
+  align-items: center;
+  gap: rem(6px);
+
+  &::after {
+    display: inline-flex;
+    width: 9px;
+    height: 5px;
+    content: '';
+    border: rem(5px) solid transparent;
+    border-top: rem(5px) solid #fff;
+    border-bottom: none;
+    transition: border-top-color .3s ease-in-out;
+    margin-left: auto;
+  }
+
+  &.active {
+    &::after {
+      border-top-color: var(--accentColor);
+    }
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    width: rem(24px);
+    height: rem(24px);
+
+    img {
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      margin-right: rem(6px);
+    }
+  }
+
+}
+
+.userItem {
+  display: flex;
+  padding: rem(10px);
+  align-items: center;
+  gap: rem(10px);
+  transition: bacground .3s ease-in-out;
+  @media(hover: hover) {
+    &:hover {
+      background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+    }
+  }
+  @media(hover: none) {
+    &:active {
+      background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "sass-rem";
+
+.currency {
+  gap: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #202F35;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  @media(min-width: 992px) {
+    min-width: rem(260px);
+  }
+  @media (max-width: 991.98px) {
+    gap: rem(14px);
+    padding: rem(5px 8px);
+  }
+
+  &__btn {
+    width: auto;
+    svg{
+      vertical-align: middle;
+    }
+    @media (max-width: 991.98px) {
+      padding: rem(4px);
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.select {
+
+
+  &__btn {
+    gap: rem(4px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    @media(min-width: 992px) {
+
+      height: rem(40px);
+    }
+
+    img {
+      width: 1rem;
+      height: 1rem;
+      object-fit: cover;
+      object-position: center;
+      display: inline-block;
+    }
+
+    &::after {
+      display: inline-flex;
+      width: 7px;
+      height: 7px;
+      content: '';
+      border-bottom: rem(1px) solid #667880;
+      border-right: rem(1px) solid #667880;
+      transform: rotate(45deg) translate(0%, -50%);
+      transition: .3s ease-in-out;
+      flex: 0 0 rem(7px);
+    }
+
+  }
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: calc(100% + rem(8px));
+    background-color: #202F35;
+    border-radius: rem(8px);
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+    min-width: rem(150px);
+
+
+    &.show {
+      max-height: 100vh;
+    }
+  }
+}
+
+.selectItem {
+  display: flex;
+  align-items: center;
+  gap: rem(4px);
+  display: flex;
+  padding: rem(10px);
+  align-items: center;
+  cursor: pointer;
+  gap: rem(10px);
+  transition: bacground .3s ease-in-out;
+  @media(hover: hover) {
+    &:hover {
+      background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+    }
+  }
+  @media(hover: none) {
+    &:active {
+      background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+    }
+  }
+
+  img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: cover;
+    object-position: center;
+    display: inline-block;
+  }
+}

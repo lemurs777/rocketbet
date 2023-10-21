@@ -1,0 +1,71 @@
+@import "sass-rem";
+
+.gameBlock {
+  margin-bottom: rem(48px);
+  @media (max-width: 991.98px) {
+    margin-bottom: rem(32px);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(var(--sizeBg));
+    position: relative;
+  }
+
+  &__btn {
+    padding-left: rem(32px);
+    padding-right: rem(32px);
+  }
+
+  &__head {
+    padding: rem(var(--sizeBg) 0);
+    display: flex;
+    align-items: center;
+    column-gap: rem(var(--sizeMd));
+  }
+
+  &__icon {
+    width: rem(36px);
+    height: rem(36px);
+    flex: 0 0 rem(36px);
+    @media (max-width: 991.98px) {
+      width: rem(24px);
+      height: rem(24px);
+      flex: 0 0 rem(24px);
+    }
+
+    svg {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__title {
+    font-size: rem(21px);
+    font-weight: 700;
+    white-space: nowrap;
+    text-transform: capitalize;
+    @media(max-width: 992px) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(var(--sizeBg));
+    @media(max-width: 1365px) {
+
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media(max-width: 991.98px) {
+      overflow-x: auto;
+      gap: rem(8px);
+      margin-right: rem(-15px);
+      grid-template-columns: repeat(6, 1fr);
+
+    }
+  }
+}

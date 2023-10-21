@@ -1,0 +1,41 @@
+@import "sass-rem";
+
+.header {
+  position: relative;
+  //max-width: rem(1920px);
+  //width: 100%;
+  height: rem(87px);
+  padding: rem(24px 0);
+  margin: 0 auto;
+  background-color: var(--bgColor);
+@media(max-width: 991.98px){
+  height: rem(68px);
+  padding: rem(18px 0);
+  z-index: 100;
+}
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20px);
+  }
+
+  &__actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    column-gap: rem(20px);
+  }
+
+  &__logo {
+    z-index: 20;
+    flex: 1 0 rem(128px);
+    @media(min-width: 991.98px) {
+      left: rem(71px);
+      position: absolute;
+
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

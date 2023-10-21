@@ -1,0 +1,21 @@
+@import "sass-rem";
+
+@import "./helpers/reset";
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./helpers/base";
+@import "./helpers/sliders";
+@import "./helpers/typograph";
+
+//Pages
+
+@import "./pages/home";
+@import "./pages/slotsPage";
+@import "./pages/tablePage";
+@import "./pages/promo";
+@import "./pages/faq";
+@import "./pages/privacy";
+@import "./pages/terms";
+@import "./pages/about";
+@import "./pages/affiliate";
+@import "./pages/contact";

@@ -1,0 +1,131 @@
+@import 'sass-rem';
+
+.banner {
+
+  position: relative;
+  padding-top: rem(14px);
+
+  &__text {
+    line-height: 1.2;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: rem(33.5px var(--sizeBg));
+    border-radius: rem(var(--sizeBg));
+    background: url('../../assets/images/banner/banner-bg.png') center/cover no-repeat;
+    overflow: hidden;
+    @media(max-width: 991.98px){
+      padding: rem(21px 22px 50px);
+    }
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(90deg, rgba(32, 47, 53, 0.73) 0%, rgba(0, 0, 0, 0.00) 100%);
+
+    }
+  }
+
+  &__inner {
+
+    position: relative;
+    color: var(--lightColor);
+    display: flex;
+    justify-content: space-between;
+    gap: rem(124px);
+    align-items: center;
+    z-index: 1;
+
+    @media(max-width: 1365px) {
+      gap: rem( 20px);
+    }
+    @media(max-width: 1199.98px) {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__character {
+    position: absolute;
+    bottom: 0;
+    left: rem(394px);
+    z-index: 1;
+    @media(max-width: 1365px) {
+      left: rem(280px);
+    }
+    @media(max-width: 1199.98px) {
+      left: rem(16px);
+
+    }
+
+    img {
+      max-width: rem(147px);
+      object-fit: cover;
+      object-position: center;
+      @media(max-width: 1199.98px) {
+        height: rem(120px);
+      }
+    }
+  }
+
+  &__content {
+    max-width: rem(428px);
+    @media (max-width: 1365px) {
+      max-width: rem(330px);
+    }
+    @media(max-width: 1199.98px) {
+      flex: 1 1 100%;
+      max-width: none;
+      margin-bottom: rem(40px);
+    }
+    @media (max-width: 991.98px){
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: rem(18px);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: rem(var(--sizeMd));
+  }
+
+  &__payList {
+    display: flex;
+    align-items: center;
+    column-gap: rem(var(--sizeMd));
+    margin-left: auto;
+    @media(max-width: 991.98px){
+      flex: 1 1 100%;
+      justify-content: flex-end;
+    }
+  }
+
+  &__btn {
+    min-width: rem(230px);
+    white-space: nowrap;
+    @media(max-width: 991.98px){
+      margin-left: auto;
+      min-width: rem(185px);
+    }
+  }
+}
+
+.bannerPayItem {
+  width: rem(60px);
+  height: rem(32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(var(--sizeMd) 10px);
+  border-radius: rem(var(--sizeSm));
+  background: var(--secondaryColor);
+  @media (max-width: 991.98px) {
+    width: rem(42px);
+    height: rem(22px);
+  }
+}

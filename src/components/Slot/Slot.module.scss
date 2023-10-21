@@ -1,0 +1,84 @@
+@import "sass-rem";
+
+.slot {
+  margin-bottom: 3rem;
+  border-radius: rem(8px);
+  overflow: hidden;
+
+  &__logo {
+    opacity: .1;
+    @media(max-width: 767.98px) {
+      display: none;
+    }
+  }
+
+  &__head {
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__bottom {
+    padding: rem(16px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #19262b;
+    @media(max-width: 767.98px) {
+      padding: rem(8px);
+    }
+
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  .slotItem {
+
+    &:nth-child(2) {
+      width: rem(12px);
+    }
+  }
+
+  &__listIcon {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+}
+
+.slotItem {
+  transition: .3s;
+  width: rem(16px);
+  height: rem(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  @media(max-width: 767.98px) {
+    //width: rem(16px);
+    //height: rem(16px);
+  }
+
+
+  &:hover {
+    color: var(--accentColor);
+    //transform: scale(1.1);
+  }
+}
+
+.btnPlay {
+
+}

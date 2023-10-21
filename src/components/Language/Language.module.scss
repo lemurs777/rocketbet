@@ -1,0 +1,65 @@
+@import "sass-rem";
+
+.language {
+  position: relative;
+  cursor: pointer;
+  padding-right: rem(29px);
+  z-index: 10;
+@media(max-width: 991.98px){
+  display: none;
+}
+  img {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  &::after {
+    filter: invert(1);
+    position: absolute;
+    right: 0;
+    content: url('../../assets/images/icons/arrow.svg');
+    width: rem(24px);
+    height: rem(24px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+ul {
+  position: absolute;
+  top: calc(100% + 10px);
+  border-radius: rem(4px);
+  background-color: #202F35;
+
+  li {
+    padding: rem(10px);
+    align-items: center;
+    cursor: pointer;
+    transition: bacground .3s ease-in-out;
+
+
+    img {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      object-position: center;
+      object-fit: cover;
+    }
+
+    @media(hover: hover) {
+      &:hover {
+        background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+      }
+    }
+    @media(hover: none) {
+      &:active {
+        background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+      }
+    }
+  }
+}
+}

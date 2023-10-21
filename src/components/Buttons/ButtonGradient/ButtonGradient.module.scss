@@ -1,0 +1,33 @@
+@import "sass-rem";
+
+.buttonGradient {
+  color: var(--lightColor);
+  text-align: center;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: rem(var(--sizeSm));
+  padding: rem(12px 22.5px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(8px);
+  max-height: rem(40px);
+  transition: color .3s ease-in-out;
+  //background-image: linear-gradient(90deg, #3dc68d 0%, #278b62 100%);
+  box-shadow: rem(0px 3px 13px 0px) #3cc38b;
+  background-image: linear-gradient(to right, #3dc68d 0%, #278b62 51%, #278b62 100%);
+  width: rem(230px);
+  background-size: 200% auto;
+  transition: .5s;
+  @media (max-width: 991.98px) {
+    width: auto;
+
+
+    box-shadow: 0px 1px 7px 0px #278D63;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right, #1D976C 0%, #3dc68d 51%, #1D976C 100%);
+    background-position: right center;
+  }
+}

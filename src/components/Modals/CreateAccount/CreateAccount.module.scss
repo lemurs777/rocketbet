@@ -1,0 +1,128 @@
+@import 'sass-rem';
+
+.checkbox {
+  color: var(--greyColor);
+  font-size: rem(12px);
+  padding: rem(2px);
+}
+
+.checkboxWrapper {
+  margin: rem(24px 0);
+
+  svg {
+    fill: var(--accentColor);
+  }
+}
+
+.createAccount {
+  //background: rgba(25, 38, 43, 0.49);
+  height: 100%;
+  &__inner {
+    height: 100%;
+    @media(min-width: 992px) {
+    display: flex;
+      min-height: rem(504px);
+      width: rem(786px);
+
+    }
+  }
+
+  &__right,
+  &__left {
+    @media(min-width: 992px) {
+      flex: 0 0 50%;
+
+    }
+  }
+
+  &__leftInner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: rem(10px);
+    height: 100%;
+  }
+
+  &__left {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: rem(16px 0 0 16px);
+    overflow: hidden;
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      left: 0;
+      background: rgba(25, 38, 43, 0.49);
+    }
+  }
+
+  &__right {
+    padding: rem(65px 24px 24px);
+    @media(max-width: 991.98px) {
+      padding: rem(16px 8px);
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: rem(28px);
+    font-weight: 700;
+    margin-bottom: rem(8px);
+    @media(max-width: 991.98px) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__subText {
+    margin-bottom: 1.5rem;
+    font-size: rem(16px);
+    @media(max-width: 991.98px) {
+      font-size: rem(14px);
+      margin-bottom: rem(24px);
+    }
+  }
+
+}
+
+.input {
+  margin-bottom: rem(16px);
+}
+
+.button {
+  margin-bottom: rem(24px);
+}
+
+.button * {
+  max-height: none;
+  width: 100%;
+  height: rem(64px);
+  @media (max-width: 991.98px) {
+    width: 100% !important;
+  }
+}
+
+.text {
+  color: var(--greyColor);
+}
+
+.loginBtn {
+  color: #6A7D85;
+  font-size: 14px;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,16 @@
+@import 'sass-rem';
+
+.title {
+  padding-left: rem(14px);
+  padding-top: rem(5px);
+  color: var(--lightColor);
+  font-size: rem(27px);
+  font-weight: 700;
+  letter-spacing: rem(1px);
+  text-transform: capitalize;
+  margin-bottom: rem(28px);
+  @media (max-width: 991.98px) {
+    font-size: rem(18px);
+    margin-bottom: rem(20px);
+  }
+}

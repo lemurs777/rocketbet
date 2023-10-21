@@ -1,0 +1,163 @@
+@import "sass-rem";
+
+.tableWrap {
+  @media(max-width: 991.98px) {
+    max-height: rem(360px);
+    overflow-y: auto;
+  }
+}
+
+.table {
+  width: 100%;
+  position: relative;
+  border-collapse: collapse;
+  @media(max-width: 991.98px) {
+    border-top: rem(1px) solid #202F35;
+    border-radius: rem(0 0 8px 8px);
+    background-color: #202F35;
+
+    display: table;
+
+    overflow-y: auto;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: rem(175px);
+      background: linear-gradient(0deg, #19262B 0%, rgba(25, 38, 43, 0.00) 100%);
+    }
+  }
+
+  tr {
+    border-radius: 8px;
+    @media(max-width: 991.98px) {
+      th {
+        background-color: #19262B;
+        font-weight: 400;
+
+      }
+      th,
+      td {
+        padding: rem(8px);
+
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(6) {
+          display: none;
+        }
+
+
+        &:nth-child(4) {
+          text-align: right;
+        }
+
+      }
+    }
+
+    &:nth-child(even) {
+      background: #19262b;
+    }
+
+    & th,
+    & td {
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: rem(12px 24px);
+
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: rem(var(--sizeMd));
+
+}
+
+.userImg {
+  width: rem(24px);
+  height: rem(24px);
+  flex: 0 0 rem(24px);
+  border-radius: 50%;
+  overflow: hidden;
+  @media(max-width: 991.98px) {
+    display: none;
+  }
+}
+
+.userGame,
+.userTime,
+.userAmount {
+  color: #404f55;
+
+}
+
+.userAmount {
+  @media(max-width: 991.98px) {
+    justify-content: flex-end;
+  }
+}
+
+.userPay,
+.userAmount {
+  display: flex;
+  column-gap: rem(6px);
+  align-items: center;
+
+}
+
+.userPay {
+  color: var(--accentColor);
+  justify-content: flex-end;
+  font-weight: 700;
+}
+
+.resultTabList {
+  display: flex;
+  align-items: center;
+  column-gap: rem(10px);
+  margin-bottom: rem(24px);
+  @media(max-width: 991.98px) {
+    margin-bottom: 0;
+    border-radius: rem(8px 8px 0 0);
+    background: #19262B;
+    justify-content: space-between;
+  }
+}
+
+.resultTabBtn {
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: rem(12px 22.5px);
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  border-radius: var(--sizeSm);
+  @media(max-width: 991.98px) {
+    padding: rem(8px);
+    font-weight: 700;
+  }
+
+  &__selected,
+  &:hover {
+    background-color: var(--secondaryColor);
+    color: var(--accentColor);
+    @media (max-width: 991.98px) {
+      background-color: transparent;
+    }
+  }
+}
+
+.react-tabs__tab--selected {
+
+  background-color: var(--secondaryColor);
+  color: var(--accentColor);
+}

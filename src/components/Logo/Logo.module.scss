@@ -1,0 +1,9 @@
+@import "sass-rem";
+
+.logo {
+  min-width: rem(128px);
+  @media (max-width: 991.98px) {
+    width: rem(128px);
+
+  }
+}

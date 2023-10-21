@@ -1,0 +1,8 @@
+.title {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  @media(max-width: 991.98px) {
+    font-size: rem(18px);
+  }
+}

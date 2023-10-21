@@ -1,0 +1,40 @@
+@import 'sass-rem';
+
+.search {
+  padding: rem(12px 0 16px);
+
+  &__item {
+    position: relative;
+    border-radius: rem(4px);
+    border: rem(1px) solid var(--secondaryColor);
+    transition: border-color .2s ease-in-out;
+
+  }
+
+  &__itemActive {
+
+
+    border-color: var(--accentColor);
+
+  }
+
+  &__input {
+    width: 100%;
+    padding: rem(12px 40px);
+
+    &::placeholder {
+      color: #404f55;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    color: #404f55;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: rem(10px);
+    transform: translateY(-50%);
+
+  }
+}

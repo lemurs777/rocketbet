@@ -1,0 +1,236 @@
+@import "sass-rem";
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.input {
+  width: 100%;
+  position: relative;
+
+  &__extension {
+    color: var(--second-color-text-icons, #404F55);
+    font-size: rem(14px);
+    font-style: italic;
+  }
+}
+
+.text {
+  color: #fff;
+  font-size: 1rem;
+}
+
+@import "sass-rem";
+
+.modalTab {
+  padding: rem(65px 24px 24px);
+  width: rem(650px);
+
+  &__descr {
+    position: relative;
+    color: #404F55;
+    padding: rem(16px) 0 0;
+    margin-bottom: 1rem;
+    font-size: rem(12px);
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: rem(1px);
+      width: 100%;
+      background-color: #22343A;
+      left: 0;
+      top: 0;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &__input {
+    margin-bottom: 1.5rem;
+  }
+
+  &__inputInfo {
+    display: inline-flex;
+    align-items: center;
+    //padding-left: rem(20px);
+    color: var(--greyColor);
+    font-size: rem(12px);
+    padding-top: rem(8px);
+
+    span {
+      display: inline-block;
+    }
+
+    img {
+      margin-right: rem(4px);
+    }
+
+  }
+
+}
+
+.modalTabList {
+  display: flex;
+  align-items: center;
+  background-color: var(--primaryColor);
+  padding: rem(8px);
+  border-radius: rem(8px);
+  margin-bottom: 1.5rem;
+}
+
+.modalTabBtn {
+  cursor: pointer;
+  padding: rem(16px);
+  border-radius: rem(8px);
+  text-align: center;
+  font-size: rem(16px);
+  font-weight: 500;
+  text-transform: capitalize;
+
+  &__selected {
+    background-color: #212F35;
+    color: #33C16C;
+  }
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.customFileName {
+  position: absolute;
+  left: 1rem;
+  z-index: 2;
+  pointer-events: none;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  height: calc(100% - rem(16px));
+  color: var(--second-color-text-icons, #404F55);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: rem(300px);
+}
+
+.title {
+  font-size: rem(28px);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.accordionBtn {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  width: 100%;
+  gap: 0.25rem;
+
+
+  &__title {
+    color: var(--lightColor);
+
+  }
+
+  &__label {
+    color: #667880;
+    font-size: rem(14px);
+    font-weight: 400;
+  }
+
+}
+
+.accordionWrap {
+  display: flex;
+  flex-direction: column;
+  gap: rem(36px);
+}
+
+.accountVerify {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion {
+  border-radius: 0.5rem !important;
+  border: 2px solid #667880;
+  background: var(--primaryColor) !important;
+
+}
+
+.accordionSummary {
+  @media(max-width: 991.98px){
+    min-height:auto !important;
+    padding: rem(12px 8px) !important;
+  }
+  svg {
+    color: #fff;
+  }
+}
+
+
+.accordionBtn {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(18px);
+
+  &__text {
+
+    color: var(--white, #FFF);
+    font-size: rem(14px);
+    font-weight: 400;
+  }
+}
+
+.accordionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16px);
+  @media (max-width: 991.98px) {
+    padding: rem(0 8px 16px) !important;
+  }
+}
+
+.crypto {
+  &__btn {
+    height: rem(64px);
+    width: 100%;
+    max-height: none;
+    margin-top: 1rem;
+  }
+}
+
+.withdrawSelect {
+  &__label {
+    color: #404F55;
+    font-size: rem(12px);
+    margin-bottom: rem(4px);
+    display: inline-block;
+  }
+}
+
+.btn {
+  width: 100%;
+  height: rem(64px);
+  max-height: none;
+}

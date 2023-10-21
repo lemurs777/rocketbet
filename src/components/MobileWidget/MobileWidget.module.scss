@@ -1,0 +1,40 @@
+@import 'sass-rem';
+.widget{
+  display: none;
+}
+@media(max-width: 991.98px) {
+  .widget {
+    display: block;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background: #19262B;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+}
+
+.item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__icon {
+    margin-bottom: 0.5rem;
+    height: rem(16px);
+    width: rem(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

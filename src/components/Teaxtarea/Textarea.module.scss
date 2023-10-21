@@ -1,0 +1,27 @@
+@import "sass-rem";
+
+.textareaItem {
+
+  label {
+    color: var(--greyColor);
+    font-size: rem(12px);
+    margin-bottom: rem(4px);
+    display: inline-block;
+  }
+
+  textarea {
+    width: 100%;
+    border-radius: rem(4px);
+    border: 2px solid var(--greyColor);
+    background: var(--btnColor);
+    font-size: rem(16px);
+    padding: rem(8px 48px 8px 16px);
+    resize: none;
+    height: rem(248px);
+
+    &:focus {
+      border-color: #667880;
+    }
+
+  }
+}

@@ -1,0 +1,51 @@
+@import "sass-rem";
+
+.menuCenter {
+  border-radius: rem(var(--sizeMd));
+  background: #19262B;
+
+  &__list {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: rem(var(--sizeMd));
+    padding-right: rem(22px);
+    overflow-x: auto;
+    gap: rem(12px);
+
+    li {
+      flex: 0 0 auto;
+    }
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+}
+
+.menuCenterItem {
+  padding: rem(var(--sizeMd));
+  display: flex;
+  justify-content: center;
+  column-gap: rem(10px);
+  padding: rem(var(--sizeMd));
+  align-items: center;
+  transition: color .2s ease-in-out;
+  border-radius: rem(var(--sizeSm));
+  white-space: nowrap;
+  text-transform: capitalize;
+  @media (max-width: 991.98px) {
+    column-gap: rem(8px);
+    color: #667880;
+  }
+
+  svg {
+    fill: currentColor;
+    flex: 0 0 rem(24px);
+  }
+
+  &:hover {
+    color: var(--accentColor);
+  }
+}
+

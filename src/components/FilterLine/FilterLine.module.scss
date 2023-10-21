@@ -1,0 +1,23 @@
+@import "sass-rem";
+
+.filters {
+  padding-top: rem(20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(16px);
+  @media (max-width: 991.98px) {
+    align-items: flex-end;
+    padding-top: 1rem;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

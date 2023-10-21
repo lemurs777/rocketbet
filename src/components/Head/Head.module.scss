@@ -1,0 +1,62 @@
+@import "sass-rem";
+
+.head {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(var(--sizeBg));
+  position: relative;
+
+  margin-bottom: rem(14px);
+
+  &__left {
+    //padding: rem(var(--sizeBg ));
+    display: flex;
+    align-items: center;
+    column-gap: rem(var(--sizeMd));
+  }
+
+  &__icon {
+    width: rem(36px);
+    height: rem(36px);
+    flex: 0 0 rem(36px);
+    @media(max-width: 991.98px) {
+      width: rem(24px);
+      height: rem(24px);
+      flex: 0 0 rem(24px);
+    }
+
+    svg {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__title {
+    font-size: rem(21px);
+    font-weight: 700;
+    text-transform: capitalize;
+    white-space: nowrap;
+    @media(max-width: 991.98px) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(var(--sizeBg));
+  }
+
+  &__btn {
+    padding-left: rem(32px);
+    padding-right: rem(32px);
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

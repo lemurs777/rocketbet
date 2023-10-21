@@ -1,0 +1,11 @@
+@import "sass-rem";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  max-width: rem(560px);
+}

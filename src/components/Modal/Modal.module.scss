@@ -1,0 +1,91 @@
+@import "sass-rem";
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  //padding-top: rem(138px);
+  //overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 34, 38, 0.93);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  pointer-events: none;
+  //padding: rem(16px);
+  //padding: rem(138px 16px);
+
+  &__content {
+
+    //overflow: hidden;
+    transition: .2s ease-in-out;
+    transform:  translateY(10%);
+    height: auto;
+    max-height: 0;
+    position: relative;
+
+    border-radius: rem(16px);
+    border: 1.9px solid var(--greyColor);
+    background: var(--bgColor);
+    /* register-shadow-mrk */
+    box-shadow: 0px 5.53018px 8.51853px 0px rgba(0, 0, 0, 0.02), 0px 13.98623px 21.54401px 0px rgba(0, 0, 0, 0.03), 0px 28.5306px 43.94776px 0px rgba(0, 0, 0, 0.04), 0px 58.76765px 90.52408px 0px rgba(0, 0, 0, 0.05), 0px 161px 248px 0px rgba(0, 0, 0, 0.07);
+    @media(min-width: 992px) {
+      //height: rem(650px);
+
+    }
+    @media(max-width: 767.98px) {
+
+      width: 350px;
+    }
+
+    &::-webkit-scrollbar {
+      width: rem(0px);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: rem(16px);
+    top: rem(16px);
+    transition: color .2s ease-in-out;
+    color: var(--lightColor);
+    @media(max-width: 991.98px) {
+      left: 50%;
+      transform: translateX(-50%);
+      top: rem(-64px);
+      border-radius: 50%;
+      background: var(--green-gradient-333, linear-gradient(90deg, #3DC68D 0%, #278B62 100%));
+      filter: drop-shadow(0px 3px 13px #3CC38B);
+      padding: rem(5px);
+      width: rem(44px);
+      height: rem(44px);
+    }
+
+    &:hover {
+      color: var(--accentColor);
+    }
+  }
+}
+
+.modalActiveContent {
+  transform: translateY(0);
+  max-height: 100vh;
+  overflow: inherit;
+}
+
+.modalActive {
+  opacity: 1;
+  pointer-events: all;
+}

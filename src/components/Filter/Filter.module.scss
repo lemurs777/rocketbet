@@ -1,0 +1,57 @@
+@import "sass-rem";
+
+.filter {
+  position: relative;
+  z-index: 4;
+  ul {
+    position: absolute;
+    top: calc(100% + rem(8px));
+    background-color: #202F35;
+    border-radius: rem(4px);
+    overflow: hidden;
+    z-index: 2;
+    transition: max-height .3s ease-in-out;
+    width: 100%;
+    left: 0;
+
+    li {
+      cursor: pointer;
+      display: flex;
+      padding: rem(10px);
+      align-items: center;
+      gap: rem(10px);
+      transition: bacground .3s ease-in-out;
+      @media(hover: hover) {
+        &:hover {
+          background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+        }
+      }
+      @media(hover: none) {
+        &:active {
+          background: linear-gradient(90deg, #3DC68D 0%, #278B62 100%);
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  padding: rem(10px);
+  border-radius: 4px;
+  background: var(--help-button-colors, #202F35);
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.05), 0px -3px 8px 0px rgba(0, 0, 0, 0.03);
+  font-weight: 600;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+
+  min-width: rem(160px);
+
+  svg {
+    color: #404F55;
+  }
+
+
+}

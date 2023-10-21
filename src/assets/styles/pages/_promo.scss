@@ -1,0 +1,14 @@
+@import "sass-rem";
+
+.promoCard {
+  img {
+    height: auto !important;
+  }
+
+  @media(max-width: 991.98px) {
+    min-width: rem(312px) !important;
+    min-height: 290px;
+    display: inline-block;
+
+  }
+}
