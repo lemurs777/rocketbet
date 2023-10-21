@@ -31,8 +31,8 @@ function App() {
   return (
     <div className="wrapper">
       <Routes>
-        <Route path='https://lemurs777.github.io/rocketbet' element={<Home />}>
-          <Route index path="/" element={<HomePage />} />
+        <Route path='/' element={<Home />}>
+          <Route index element={<HomePage />} />
           <Route path='/slots' element={<SlotsPage />} />
           <Route path='/blackjack' element={<BlackJackPage />} />
           <Route path='/table' element={<TablePage />} />
