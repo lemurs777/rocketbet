@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rocketbet/static/css/main.68e29324.css",
-    "main.js": "/rocketbet/static/js/main.ed75a7bb.js",
+    "main.js": "/rocketbet/static/js/main.0e5ef806.js",
     "static/media/sliderBg-3.png": "/rocketbet/static/media/sliderBg-3.64194daf0fc2c2b90b61.png",
     "static/media/sliderBg-2.png": "/rocketbet/static/media/sliderBg-2.34e1b2e63ff7d5bd3d16.png",
     "static/media/sliderImg-1.png": "/rocketbet/static/media/sliderImg-1.32dd3171f8baf580f3bd.png",
@@ -129,10 +129,10 @@
     "static/media/upload.svg": "/rocketbet/static/media/upload.a2e39bc63282dccb9721b73d0a3d2d98.svg",
     "static/media/burger.svg": "/rocketbet/static/media/burger.427f65da4b890cf480acdbebeaa01376.svg",
     "main.68e29324.css.map": "/rocketbet/static/css/main.68e29324.css.map",
-    "main.ed75a7bb.js.map": "/rocketbet/static/js/main.ed75a7bb.js.map"
+    "main.0e5ef806.js.map": "/rocketbet/static/js/main.0e5ef806.js.map"
   },
   "entrypoints": [
     "static/css/main.68e29324.css",
-    "static/js/main.ed75a7bb.js"
+    "static/js/main.0e5ef806.js"
   ]
 }
