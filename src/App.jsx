@@ -23,7 +23,7 @@ import AccountSecurityPage from "./pages/AccountSecurityPage"
 import AccountVerificationPage from "./pages/AccountVerificationPage"
 import SlotPage from "./pages/SlotPage"
 import SlotP from "./pages/SlotP"
-
+import Error from './pages/Error'
 
 function App() {
   // const [isModalOpen, setIsModalOpen] = useState(false)
