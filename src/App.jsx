@@ -48,6 +48,8 @@ function App() {
           <Route path='/affiliate' element={<AffiliatePage />} />
           <Route path='/contact' element={<ContactPage />} />
           <Route path="/slot" element={<SlotPage />} />
+          <Route path="/slot" element={<SlotPage />} />
+          <Route path="*" element={<Error />} />
         </Route>
         <Route path='account' element={<Account />}>
           <Route path="general" element={<AccountGeneralPage />} />
