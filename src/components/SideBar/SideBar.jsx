@@ -99,7 +99,7 @@ const SideBar = () => {
         </div>
         <ul className={styles.sidebar__list}>
           {db.map((item, index) => (
-            <SideBarSubMenu item={item} index={index} subMenu={isOpen} onClick={() => {
+            <SideBarSubMenu item={item} key={index} index={index} subMenu={isOpen} onClick={() => {
               if (item.submenu) {
                 setIsOpen(true)
               }

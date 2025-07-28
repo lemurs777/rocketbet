@@ -1,13 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import ButtonGradient from '../components/Buttons/ButtonGradient'
-
+import {Link} from 'react-router-dom'
 const Error = () => {
   return (
-    <ButtonGradient>
-
-      <Link to={'/'}>Error</Link>
-    </ButtonGradient>
+    <Link to='/'>Error</Link>
   )
 }
 

@@ -21,8 +21,8 @@ const Language = () => {
   const [iconLang, setIconLang] = useState(languageList[0].icon)
   const [showLanguage, setShowLanguage] = useState(false)
   return (
-    <div className={styles.language}>
-      <button className={styles.language__icon} onClick={() => setShowLanguage(!showLanguage)}><img src={iconLang} alt="language"/>
+    <div className={styles.language}  onClick={() => setShowLanguage(!showLanguage)}>
+      <button className={styles.language__icon}><img src={iconLang} alt="language"/>
       </button>
       {showLanguage && (
         <ul>
